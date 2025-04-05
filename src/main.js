@@ -1,6 +1,8 @@
-import { listaEmpresas } from "./listaEmpresas";
-import { checkVazamentoEmpresa } from "./checkVazamentos";
-import { abrirConexaoNoBanco } from "./database";
+import { listaEmpresas } from "./listaEmpresas.js";
+import { checkVazamentoEmpresa } from "./checkVazamentos.js";
+import { abrirConexaoNoBanco } from "./database.js";
+import { fecharConexaoNoBanco } from "./database.js";
+import { adjustTimezone } from "./utils.js";
 
 async function executarScript() {
     

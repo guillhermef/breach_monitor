@@ -1,8 +1,10 @@
 CREATE DATABASE monitoramento;
 
-CREATE TABLE monitoramento_ssl (
+\c monitoramento;
+
+CREATE TABLE vazamentos (
   id SERIAL PRIMARY KEY,
-  name TEXT UNIQUE,
+  name VARCHAR(255) UNIQUE,
   title TEXT,
   domain TEXT,
   breach_date DATE,
@@ -10,6 +12,6 @@ CREATE TABLE monitoramento_ssl (
   pwn_count INTEGER,
   description TEXT,
   data_classes TEXT[],
-  notified,
+  notified BOOLEAN,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
