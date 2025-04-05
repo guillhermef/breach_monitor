@@ -5,7 +5,7 @@ dotenv.config();
 // Variáveis de ambiente
 const WEBHOOK = process.env.API_WEBHOOK;
 
-export async function enviarWebhook(Title, Domain, BreachDate, PwnCount, Description, DataClasses, LogoPath = '') {
+export async function enviarWebhook(Title, Domain, BreachDate, PwnCount, Description, DataClasses) {
     try {
         const dataFormatada = new Date(BreachDate).toLocaleDateString('pt-BR');
         const tiposDados = DataClasses.join(', ');

@@ -57,14 +57,14 @@ export async function inserirResultados(
     `;
 
     await dbConfig.query(query, [
-        name,
-        title,
-        dominio,
-        breach_date,
-        added_date,
-        pwn_count,
-        description,
-        data_classes,        
+        Name,
+        Title,
+        Domain,
+        BreachDate,
+        Addeddate,
+        PwnCount,
+        Description,
+        DataClasses,        
         notified
     ]);
 
@@ -75,7 +75,6 @@ export async function existe(name) {
 
     const query = `SELECT name FROM vazamentos WHERE name = $1 LIMIT 1`;
     const resultado = await dbConfig.query(query, [name])
-
     return resultado.rowCount > 0;
 
 };
